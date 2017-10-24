@@ -40,12 +40,17 @@ var w = document.getElementById('letter-w');
 var x = document.getElementById('letter-x');
 var y = document.getElementById('letter-y');
 var z = document.getElementById('letter-z');
+var hintbox = document.getElementById('hint-box')
 
 function startGame() {
 
 
 }
 
+function giveHint() {
+  hintbox.textContent = teamNames[0].hintOne;
+
+}
 
 
 function log() {
@@ -53,6 +58,7 @@ function log() {
 }
 
 a.addEventListener('click', log);
+hint.addEventListener('click', giveHint);
 
 
 
