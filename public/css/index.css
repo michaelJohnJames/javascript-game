@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    background-color: rgba(0,0,0,0.1);
+  }
+
+  button {
+    width: 50px;
+    height: 50px;
+    color: white;
+    background: #000080;
+    padding: 5px;
+    border: 1px dashed black;
+    border-radius: 50%;
+    font-size: 20px;
+    margin: 2px;
+  }
+
+  .button-box {
+    padding: 20px;
+    border: 2px dashed black;
+    margin-top: 500px;
+    margin-left: 100px;
+  }
+
+
+#headline {
+  font-size: 80px;
+  text-align: center;
+  font-family: serif;
+  display: inline;
+  top: 200px;
+}
+
+.headline-box {
+  width: 100%;
+  height: 200px;
+  padding: 20px;
+}
+
+img {
+  margin: 10px;
+}
