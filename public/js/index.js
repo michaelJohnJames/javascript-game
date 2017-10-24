@@ -41,6 +41,12 @@ var x = document.getElementById('letter-x');
 var y = document.getElementById('letter-y');
 var z = document.getElementById('letter-z');
 
+function startGame() {
+
+
+}
+
+
 
 function log() {
   console.log("A");
