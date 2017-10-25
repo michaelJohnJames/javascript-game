@@ -64,10 +64,7 @@ hintOne: "AFC West"},
 hintOne: "AFC West"},
 { name: "Chiefs",
 hintOne: "AFC West"}
-
-
-
-]
+];
 
 var letters = document.getElementById('letters');
 var a = document.getElementById('letter-a');
@@ -93,14 +90,15 @@ var t = document.getElementById('letter-t');
 var u = document.getElementById('letter-u');
 var v = document.getElementById('letter-v');
 var w = document.getElementById('letter-w');
-var x = document.getElementById('letter-x');
+var xx = document.getElementById('letter-x');
 var y = document.getElementById('letter-y');
 var z = document.getElementById('letter-z');
-var hintbox = document.getElementById('hint-box')
+var hintbox = document.getElementById('hint-box');
 var x = Math.floor(Math.random() * (31 - 0) + 0);
+var word = letters.textContent = teamNames[x].name;
+var tries = document.getElementById('tries');
 
 function startGame() {
-  var x = Math.floor(Math.random() * (3 - 0) + 0);
   letters.textContent = teamNames[x].name;
 
 }
@@ -110,13 +108,44 @@ function giveHint() {
 
 }
 
-
-letters.textContent = teamNames[x].name;
-
-
-function log() {
-  console.log("A");
+function log(letter) {
+  console.log(letter);
 }
 
+
+// function letter(guess) {
+//  if (/[guess]/ig) {
+//    console.log(guess);//replace letter
+//  } else { tries++;
+
+//  };
+//}
+
+startGame();
 a.addEventListener('click', log);
+b.addEventListener('click', log);
+c.addEventListener('click', log);
+d.addEventListener('click', log);
+e.addEventListener('click', log);
+f.addEventListener('click', log);
+g.addEventListener('click', log);
+h.addEventListener('click', log);
+i.addEventListener('click', log);
+j.addEventListener('click', log);
+k.addEventListener('click', log);
+l.addEventListener('click', log);
+m.addEventListener('click', log);
+n.addEventListener('click', log);
+o.addEventListener('click', log);
+p.addEventListener('click', log);
+q.addEventListener('click', log);
+r.addEventListener('click', log);
+s.addEventListener('click', log);
+t.addEventListener('click', log);
+u.addEventListener('click', log);
+v.addEventListener('click', log);
+w.addEventListener('click', log);
+xx.addEventListener('click', log);
+y.addEventListener('click', log);
+z.addEventListener('click', log);
 hint.addEventListener('click', giveHint);
