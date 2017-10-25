@@ -1,17 +1,73 @@
  var teamNames = [
    { name: "Eagles",
-     hintOne: "NFC East",
-     hintTwo: "Philadelphia"},
+     hintOne: "NFC East"},
   { name: "Cowboys",
-  hintOne: "NFC East",
-hintTwo: "Dallas"},
+  hintOne: "NFC East"},
 { name: "Redskins",
-hintOne: "NFC East",
-hintTwo: "Washington"},
+hintOne: "NFC East"},
 { name: "Giants",
-hintOne: "NFC East",
-hintTwo: "New York"
-}]
+hintOne: "NFC East"
+},
+{ name: "Buccaneers",
+hintOne: "NFC South"},
+{ name: "Falcons",
+hintOne: "NFC South"},
+{ name: "Panthers",
+hintOne: "NFC South"},
+{ name: "Saints",
+hintOne: "NFC South"},
+{ name: "Seahawks",
+hintOne: "NFC West"},
+{ name: "Forty Niners",
+hintOne: "NFC West"},
+{ name: "Rams",
+hintOne: "NFC West"},
+{ name: "Cardinals",
+hintOne: "NFC West"},
+{ name: "Vikings",
+hintOne: "NFC North"},
+{ name: "Packers",
+hintOne: "NFC North"},
+{ name: "Bears",
+hintOne: "NFC North"},
+{ name: "Lions",
+hintOne: "NFC North"},
+{ name: "Patriots",
+hintOne: "AFC East"},
+{ name: "Jets",
+hintOne: "AFC East"},
+{ name: "Bills",
+hintOne: "AFC East"},
+{ name: "Dolphins",
+hintOne: "AFC East"},
+{ name: "Ravens",
+hintOne: "AFC North"},
+{ name: "Steelers",
+hintOne: "AFC North"},
+{ name: "Bengals",
+hintOne: "AFC North"},
+{ name: "Browns",
+hintOne: "AFC North"},
+{ name: "Titans",
+hintOne: "AFC South"},
+{ name: "Jaguars",
+hintOne: "AFC South"},
+{ name: "Colts",
+hintOne: "AFC South"},
+{ name: "Texans",
+hintOne: "AFC South"},
+{ name: "Raiders",
+hintOne: "AFC West"},
+{ name: "Chargers",
+hintOne: "AFC West"},
+{ name: "Broncos",
+hintOne: "AFC West"},
+{ name: "Chiefs",
+hintOne: "AFC West"}
+
+
+
+]
 
 var letters = document.getElementById('letters');
 var a = document.getElementById('letter-a');
@@ -41,16 +97,21 @@ var x = document.getElementById('letter-x');
 var y = document.getElementById('letter-y');
 var z = document.getElementById('letter-z');
 var hintbox = document.getElementById('hint-box')
+var x = Math.floor(Math.random() * (31 - 0) + 0);
 
 function startGame() {
-
+  var x = Math.floor(Math.random() * (3 - 0) + 0);
+  letters.textContent = teamNames[x].name;
 
 }
 
 function giveHint() {
-  hintbox.textContent = teamNames[0].hintOne;
+  hintbox.textContent = teamNames[x].hintOne;
 
 }
+
+
+letters.textContent = teamNames[x].name;
 
 
 function log() {
@@ -59,7 +120,3 @@ function log() {
 
 a.addEventListener('click', log);
 hint.addEventListener('click', giveHint);
-
-
-
-letters.textContent = teamNames[0].name;
