@@ -1,3 +1,4 @@
+(function game() {
  var teamNames = [
    { name: "Eagles",
      hintOne: "NFC East"},
@@ -95,13 +96,24 @@ var y = document.getElementById('letter-y');
 var z = document.getElementById('letter-z');
 var hintbox = document.getElementById('hint-box');
 var x = Math.floor(Math.random() * (31 - 0) + 0);
-var word = letters.textContent = teamNames[x].name;
+
 var tries = document.getElementById('tries');
 
+
+
+
+//word.replace(/[abcdefghijklmnopqrstuvwxyz]/ig, "_");
+
 function startGame() {
-  letters.textContent = teamNames[x].name;
+  letters.textContent = teamNames[x].name.replace(/./ig, " _ ");;
 
 }
+
+  //word.replaceAll(".", "_");
+// let str = letters.textContent = teamNames[x].name;
+//teamNames[x].name.replaceAll(_);
+
+//}
 
 function giveHint() {
   hintbox.textContent = teamNames[x].hintOne;
@@ -110,6 +122,7 @@ function giveHint() {
 
 function log(letter) {
   console.log(letter);
+  tries++;
 }
 
 
@@ -149,3 +162,5 @@ xx.addEventListener('click', log);
 y.addEventListener('click', log);
 z.addEventListener('click', log);
 hint.addEventListener('click', giveHint);
+
+})()
