@@ -76,7 +76,7 @@ var e = document.getElementById('letter-e');
 var f = document.getElementById('letter-f');
 var g = document.getElementById('letter-g');
 var h = document.getElementById('letter-h');
-var i = document.getElementById('letter-i');
+//var iii = document.getElementById('letter-i');
 var j = document.getElementById('letter-j');
 var k = document.getElementById('letter-k');
 var l = document.getElementById('letter-l');
@@ -96,7 +96,6 @@ var y = document.getElementById('letter-y');
 var z = document.getElementById('letter-z');
 var hintbox = document.getElementById('hint-box');
 var x = Math.floor(Math.random() * (31 - 0) + 0);
-
 var tries = document.getElementById('tries');
 
 
@@ -105,7 +104,7 @@ var tries = document.getElementById('tries');
 //word.replace(/[abcdefghijklmnopqrstuvwxyz]/ig, "_");
 
 function startGame() {
-  letters.textContent = teamNames[x].name.replace(/./ig, " _ ");;
+  letters.textContent = teamNames[x].name.replace(/./ig, " _ ");
 
 }
 
@@ -120,10 +119,31 @@ function giveHint() {
 
 }
 
-function log(letter) {
-  console.log(letter);
-  tries++;
+function log() {
+  console.log("good");
 }
+
+function guess(letter) {
+  let word = teamNames[x].name;
+  Array.from(word);
+  console.log(Array.from(word));
+  //var userGuess = letter;
+//for ( let i = 0; i < Array.from(word).length; i++ );
+//  if ( letter ===  ) {
+//    word.replace(/_/ig, letter);
+//  } else { tries++ }
+
+  //word.replace(/_/ig, userGuess);
+  //Array.from(word);
+  //for (let character of Array.from(word) ) {
+  //  i=0; i < Array.from(word).length; i++ ) {
+    //Array.from(word).forEach(log());
+  //  if (/
+  };
+//if (word.includes(letter)) {
+  //return word.replace(/_/ig, letter);
+
+
 
 
 // function letter(guess) {
@@ -135,32 +155,32 @@ function log(letter) {
 //}
 
 startGame();
-a.addEventListener('click', log);
-b.addEventListener('click', log);
-c.addEventListener('click', log);
-d.addEventListener('click', log);
-e.addEventListener('click', log);
-f.addEventListener('click', log);
-g.addEventListener('click', log);
-h.addEventListener('click', log);
-i.addEventListener('click', log);
-j.addEventListener('click', log);
-k.addEventListener('click', log);
-l.addEventListener('click', log);
-m.addEventListener('click', log);
-n.addEventListener('click', log);
-o.addEventListener('click', log);
-p.addEventListener('click', log);
-q.addEventListener('click', log);
-r.addEventListener('click', log);
-s.addEventListener('click', log);
-t.addEventListener('click', log);
-u.addEventListener('click', log);
-v.addEventListener('click', log);
-w.addEventListener('click', log);
-xx.addEventListener('click', log);
-y.addEventListener('click', log);
-z.addEventListener('click', log);
+a.addEventListener('click', guess(a));
+b.addEventListener('click', guess(b));
+c.addEventListener('click', guess(c));
+d.addEventListener('click', guess(d));
+e.addEventListener('click', guess(e));
+f.addEventListener('click', guess(f));
+g.addEventListener('click', guess(g));
+h.addEventListener('click', guess(h));
+//iii.addEventListener('click', guess(i));
+j.addEventListener('click', guess(j));
+k.addEventListener('click', guess(k));
+l.addEventListener('click', guess(l));
+m.addEventListener('click', guess(m));
+n.addEventListener('click', guess(n));
+o.addEventListener('click', guess(o));
+p.addEventListener('click', guess(p));
+q.addEventListener('click', guess(q));
+r.addEventListener('click', guess(r));
+s.addEventListener('click', guess(s));
+t.addEventListener('click', guess(t));
+u.addEventListener('click', guess(u));
+v.addEventListener('click', guess(v));
+w.addEventListener('click', guess(w));
+xx.addEventListener('click', guess(x));
+y.addEventListener('click', guess(y));
+z.addEventListener('click', guess(z));
 hint.addEventListener('click', giveHint);
 
 })()
