@@ -76,7 +76,7 @@ var e = document.getElementById('letter-e');
 var f = document.getElementById('letter-f');
 var g = document.getElementById('letter-g');
 var h = document.getElementById('letter-h');
-//var iii = document.getElementById('letter-i');
+var i = document.getElementById('letter-i');
 var j = document.getElementById('letter-j');
 var k = document.getElementById('letter-k');
 var l = document.getElementById('letter-l');
@@ -124,12 +124,17 @@ function log() {
 }
 
 function guess(letter) {
+//var letter = button.value;
+let tries = document.getElementById('tries');
+letters.textContent = teamNames[x].name.replace(/./ig, " _ ");
   let word = teamNames[x].name;
-  Array.from(word);
-  console.log(Array.from(word));
-  //var userGuess = letter;
-//for ( let i = 0; i < Array.from(word).length; i++ );
-//  if ( letter ===  ) {
+  hiddenWord = Array.from(word);
+for ( let it = 0; it < hiddenWord.length; it++ );
+ if ( hiddenWord.includes(letter) ) {
+   letter.replace("_", letter ) } else {
+      tries++ ;
+   }
+//   else { console.log(no match) }
 //    word.replace(/_/ig, letter);
 //  } else { tries++ }
 
@@ -155,15 +160,15 @@ function guess(letter) {
 //}
 
 startGame();
-a.addEventListener('click', guess(a));
-b.addEventListener('click', guess(b));
+a.addEventListener('click', guess("a"));
+b.addEventListener('click', guess("b"));
 c.addEventListener('click', guess(c));
 d.addEventListener('click', guess(d));
 e.addEventListener('click', guess(e));
 f.addEventListener('click', guess(f));
 g.addEventListener('click', guess(g));
 h.addEventListener('click', guess(h));
-//iii.addEventListener('click', guess(i));
+i.addEventListener('click', guess("i"));
 j.addEventListener('click', guess(j));
 k.addEventListener('click', guess(k));
 l.addEventListener('click', guess(l));
