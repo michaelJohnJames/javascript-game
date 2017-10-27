@@ -98,8 +98,10 @@ var hintbox = document.getElementById('hint-box');
 var random = Math.floor(Math.random() * (31 - 0) + 0);
 var tries = document.getElementById('tries');
 var replay = document.querySelector('.restart');
-var state = teamNames[random].name.split("").fill("_");
+var state = teamNames[random].name.split("").fill('_')
+//var state = teamNames[random].name.replace(/./ig, "_");
 
+console.log(state);
 
 //var answer = teamNames[x].name;
 //let state = answer.split("").fill("_");
@@ -107,8 +109,8 @@ var state = teamNames[random].name.split("").fill("_");
 
 function startGame() {
   var answer = teamNames[random].name;
-  letters.textContent = answer.split("").fill("_");
-  //letters.textContent = answer.replace(/./ig, " _ ");
+  //letters.textContent = answer.split("").fill("_");
+  letters.textContent = state;
   hintbox.textContent = "";
 
 
@@ -134,13 +136,20 @@ function giveHint() {
 function takeGuess(guess) {
     //let tries = document.getElementById('tries');
     //let guesses = "";
-  let answer = Array.from(teamNames[random].name);
+    let answer = Array.from(teamNames[random].name);
+
+      //let state = teamNames[random].name.split("").fill("_");
+console.log(answer);
 //let state = answer.split("").fill("_");
 //console.log(answer);
-  for ( let i = 0; i < answer.length; i++ ) {
+//console.log(state);
+  for ( let i = 0; i < state.length; i++ ) {
+//let state = teamNames[random].name.split("").fill("_");
   let letter = answer[i];
    if ( letter === guess ) {
-    state[i] === guess }
+    state[i] = guess;
+  letters.textContent = state;
+ }
 }
    };
 
