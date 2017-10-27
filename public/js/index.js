@@ -101,6 +101,7 @@ var replay = document.querySelector('.restart');
 var state = teamNames[random].name.split("").fill('_')
 var answer = teamNames[random].name;
 //var state = teamNames[random].name.replace(/./ig, "_");
+var triesCounter = numTries.textContent
 
 
 //var answer = teamNames[x].name;
@@ -111,7 +112,8 @@ function startGame() {
   var answer = teamNames[random].name;
   letters.textContent = state.join(" ");
   hintbox.textContent = "";
-  numTries.textContent = 5;
+  let triesCounter = 5;
+
 
 
 
@@ -129,7 +131,6 @@ function giveHint() {
 
 
 function takeGuess(guess) {
-    let tries = document.getElementById('tries');
     //let guesses = "";
     //let answer = Array.from(teamNames[random].name);
 
@@ -143,7 +144,7 @@ function takeGuess(guess) {
   letters.textContent = state.join(" ");
 }
  }
- numTries.textContent--
+ triesCounter--;
  function loseGame() {
    if ( numTries.textContent <= 0 ) {
    window.alert("You Lost! Try again!")
