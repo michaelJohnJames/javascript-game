@@ -4,8 +4,13 @@
     /*background-color: rgba(0,0,0,0.1);*/
   }
 
+  body {
+    background-image: url(img/footballfield.jpg)
+  }
+
 .container {
   text-align: center;
+  
 }
 
   button {

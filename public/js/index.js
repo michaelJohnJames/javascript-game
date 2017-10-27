@@ -143,17 +143,22 @@ function takeGuess(guess) {
   letters.textContent = state.join(" ");
 }
  }
- tries.textContent--
+ numTries.textContent--
+ function loseGame() {
+   if ( numTries.textContent <= 0 ) {
+   window.alert("You Lost! Try again!")
+   }
+ }
 }
   // };
-function loseGame() {
-  if ( tries.textContent = 0 ) {
-  alert("You Lost! Try again!")
-  }
-}
+//function loseGame() {
+//  if ( numTries.textContent <= 0 ) {
+//  alert("You Lost! Try again!")
+//  }
+//}
 
 startGame();
-loseGame();
+//loseGame();
 a.addEventListener('click', () => takeGuess("a"));
 b.addEventListener('click', () => takeGuess("b"));
 c.addEventListener('click', () => takeGuess("c"));

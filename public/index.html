@@ -1,85 +1,89 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Javascript Game</title>
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/index.css">
-  </head>
-  <body>
 
-<div class="container">
-<div class="headline-box">
-<img src="img/nfllogo.jpg" alt="NFL" height="60" width="70">
-<h1 id="headline">Guess a team nickname</h1>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Javascript Game</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/index.css">
+</head>
 
-</div>
-
-<button class="restart hidden">Restart</button>
-
-<div class="letter-box">
-<div id="letters" class="hidden">
-
-</div>
-</div>
-<br>
-<br>
+<body>
 
 
+  <div class="container">
+    <div class="headline-box">
+      <img src="img/nfllogo.jpg" alt="NFL" height="60" width="70">
+      <h1 id="headline">Guess a team nickname</h1>
 
-<div class="tries-box">
-<p>Number of tries: <span id="tries"></span></p>
-</div>
-<br>
+    </div>
 
-<button id="hint">Click for a Hint</button>
-<div id="hint-box">
- </div>
+    <button class="restart hidden">Restart</button>
+
+    <div class="letter-box">
+      <div id="letters" class="hidden">
+
+      </div>
+    </div>
+    <br>
+    <br>
 
 
 
+    <div class="tries-box">
+      <p>Number of tries: <span id="tries"></span></p>
+    </div>
+    <br>
 
-<form onsubmit="return false">
-<div class="button-box">
-  <h3>Select a letter</h3>
-<div class="button-top">
-
-<button id="letter-a" value='a'>A</button>
-<button id="letter-b">B</button>
-<button id="letter-c">C</button>
-<button id="letter-d">D</button>
-<button id="letter-e">E</button>
-<button id="letter-f">F</button>
-<button id="letter-g">G</button>
-<button id="letter-h">H</button>
-<button id="letter-i">I</button>
-<button id="letter-j">J</button>
-<button id="letter-k">K</button>
-<button id="letter-l">L</button>
-<button id="letter-m">M</button>
-</div>
-<div class="button-bottom">
-<button id="letter-n">N</button>
-<button id="letter-o">O</button>
-<button id="letter-p">P</button>
-<button id="letter-q">Q</button>
-<button id="letter-r">R</button>
-<button id="letter-s">S</button>
-<button id="letter-t">T</button>
-<button id="letter-u">U</button>
-<button id="letter-v">V</button>
-<button id="letter-w">W</button>
-<button id="letter-x">X</button>
-<button id="letter-y">Y</button>
-<button id="letter-z">Z</button>
-</div>
-</div>
-</form>
-</div>
+    <button id="hint">Click for a Hint</button>
+    <div id="hint-box">
+    </div>
 
 
-    <!-- JavaScripts -->
-    <script src="js/index.js"></script>
-  </body>
+
+
+    <form onsubmit="return false">
+      <div class="button-box">
+        <h3>Select a letter</h3>
+        <div class="button-top">
+
+          <button id="letter-a" value='a'>A</button>
+          <button id="letter-b">B</button>
+          <button id="letter-c">C</button>
+          <button id="letter-d">D</button>
+          <button id="letter-e">E</button>
+          <button id="letter-f">F</button>
+          <button id="letter-g">G</button>
+          <button id="letter-h">H</button>
+          <button id="letter-i">I</button>
+          <button id="letter-j">J</button>
+          <button id="letter-k">K</button>
+          <button id="letter-l">L</button>
+          <button id="letter-m">M</button>
+        </div>
+        <div class="button-bottom">
+          <button id="letter-n">N</button>
+          <button id="letter-o">O</button>
+          <button id="letter-p">P</button>
+          <button id="letter-q">Q</button>
+          <button id="letter-r">R</button>
+          <button id="letter-s">S</button>
+          <button id="letter-t">T</button>
+          <button id="letter-u">U</button>
+          <button id="letter-v">V</button>
+          <button id="letter-w">W</button>
+          <button id="letter-x">X</button>
+          <button id="letter-y">Y</button>
+          <button id="letter-z">Z</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+  <!-- JavaScripts -->
+  <script src="js/index.js"></script>
+</body>
+
 </html>
