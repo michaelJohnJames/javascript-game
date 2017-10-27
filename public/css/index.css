@@ -42,6 +42,14 @@
 
   }
 
+  .restart {
+    width: 150px;
+    height: 50px;
+    border-radius: 10%;
+    position: relative;
+    display: inline-block;
+  }
+
 
 #headline {
   font-size: 60px;
@@ -94,6 +102,6 @@ h3 {
 
 }
 
-/* .hidden {
+ /*.hidden {
   display: none;
-} */
+}*/

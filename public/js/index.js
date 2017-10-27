@@ -97,15 +97,26 @@ var z = document.getElementById('letter-z');
 var hintbox = document.getElementById('hint-box');
 var x = Math.floor(Math.random() * (31 - 0) + 0);
 var tries = document.getElementById('tries');
+var replay = document.querySelector('.restart');
+var state = teamNames[x].name.replace(/./ig, " _ ")
 
 
-
-
+//var answer = teamNames[x].name;
+//let state = answer.split("").fill("_");
 //word.replace(/[abcdefghijklmnopqrstuvwxyz]/ig, "_");
 
 function startGame() {
-  letters.textContent = teamNames[x].name.replace(/./ig, " _ ");
+  var answer = teamNames[x].name;
+  //letters.textContent = answer.split("").fill("_");
+  letters.textContent = answer.replace(/./ig, " _ ");
+  hintbox.textContent = "";
 
+
+
+  function giveHint() {
+    hintbox.textContent = teamNames[x].hintOne;
+
+  }
 }
 
   //word.replaceAll(".", "_");
@@ -119,21 +130,25 @@ function giveHint() {
 
 }
 
-function log() {
-  console.log("good");
+function log(letter) {
+  console.log(letter);
 }
 
-function guess(letter) {
-//var letter = button.value;
-let tries = document.getElementById('tries');
-letters.textContent = teamNames[x].name.replace(/./ig, " _ ");
-  let word = teamNames[x].name;
-  hiddenWord = Array.from(word);
-for ( let it = 0; it < hiddenWord.length; it++ );
- if ( hiddenWord.includes(letter) ) {
-   letter.replace("_", letter ) } else {
-      tries++ ;
-   }
+
+
+function takeGuess(guess) {
+    //let tries = document.getElementById('tries');
+    //let guesses = "";
+var answer = teamNames[x].name;
+   let state = Array.from(answer);
+
+//let state = answer.split("").fill("_");
+for ( let i = 0; i < state.length; i++ ) {
+ let letter = answer[i];
+ if ( letter === guess ) {
+   state[i] === guess }
+}
+   };
 //   else { console.log(no match) }
 //    word.replace(/_/ig, letter);
 //  } else { tries++ }
@@ -144,11 +159,13 @@ for ( let it = 0; it < hiddenWord.length; it++ );
   //  i=0; i < Array.from(word).length; i++ ) {
     //Array.from(word).forEach(log());
   //  if (/
-  };
+  //};
 //if (word.includes(letter)) {
   //return word.replace(/_/ig, letter);
 
-
+//function gameEnd() {
+//  if (word === )
+//}
 
 
 // function letter(guess) {
@@ -160,32 +177,32 @@ for ( let it = 0; it < hiddenWord.length; it++ );
 //}
 
 startGame();
-a.addEventListener('click', guess("a"));
-b.addEventListener('click', guess("b"));
-c.addEventListener('click', guess(c));
-d.addEventListener('click', guess(d));
-e.addEventListener('click', guess(e));
-f.addEventListener('click', guess(f));
-g.addEventListener('click', guess(g));
-h.addEventListener('click', guess(h));
-i.addEventListener('click', guess("i"));
-j.addEventListener('click', guess(j));
-k.addEventListener('click', guess(k));
-l.addEventListener('click', guess(l));
-m.addEventListener('click', guess(m));
-n.addEventListener('click', guess(n));
-o.addEventListener('click', guess(o));
-p.addEventListener('click', guess(p));
-q.addEventListener('click', guess(q));
-r.addEventListener('click', guess(r));
-s.addEventListener('click', guess(s));
-t.addEventListener('click', guess(t));
-u.addEventListener('click', guess(u));
-v.addEventListener('click', guess(v));
-w.addEventListener('click', guess(w));
-xx.addEventListener('click', guess(x));
-y.addEventListener('click', guess(y));
-z.addEventListener('click', guess(z));
+a.addEventListener('click', takeGuess("a"));
+b.addEventListener('click', takeGuess(b));
+c.addEventListener('click', takeGuess(c));
+d.addEventListener('click', takeGuess(d));
+e.addEventListener('click', takeGuess(e));
+f.addEventListener('click', takeGuess(f));
+g.addEventListener('click', takeGuess(g));
+h.addEventListener('click', takeGuess(h));
+i.addEventListener('click', takeGuess(i));
+j.addEventListener('click', takeGuess(j));
+k.addEventListener('click', takeGuess(k));
+l.addEventListener('click', takeGuess(l));
+m.addEventListener('click', takeGuess(m));
+n.addEventListener('click', takeGuess(n));
+o.addEventListener('click', takeGuess(o));
+p.addEventListener('click', takeGuess(p));
+q.addEventListener('click', takeGuess(q));
+r.addEventListener('click', takeGuess(r));
+s.addEventListener('click', takeGuess(s));
+t.addEventListener('click', takeGuess(t));
+u.addEventListener('click', takeGuess(u));
+v.addEventListener('click', takeGuess(v));
+w.addEventListener('click', takeGuess(w));
+xx.addEventListener('click', takeGuess(x));
+y.addEventListener('click', takeGuess(y));
+z.addEventListener('click', takeGuess(z));
 hint.addEventListener('click', giveHint);
-
+replay.addEventListener('click', game);
 })()
