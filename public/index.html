@@ -9,11 +9,14 @@
   </head>
   <body>
 
+<div class="container">
 <div class="headline-box">
 <img src="img/nfllogo.jpg" alt="NFL" height="60" width="70">
 <h1 id="headline">Guess a team nickname</h1>
 
 </div>
+
+<button class="restart hidden">Restart</button>
 
 <div class="letter-box">
 <div id="letters" class="hidden">
@@ -23,11 +26,12 @@
 <br>
 <br>
 
-<button class="restart hidden">Restart</button>
+
 
 <div class="tries-box">
-<p>Number of tries: </p><p id="tries">0</p>
+<p>Number of tries: <span id="tries"></span></p>
 </div>
+<br>
 
 <button id="hint">Click for a Hint</button>
 <div id="hint-box">
@@ -72,7 +76,7 @@
 </div>
 </div>
 </form>
-
+</div>
 
 
     <!-- JavaScripts -->

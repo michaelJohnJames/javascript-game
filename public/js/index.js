@@ -96,12 +96,12 @@ var y = document.getElementById('letter-y');
 var z = document.getElementById('letter-z');
 var hintbox = document.getElementById('hint-box');
 var random = Math.floor(Math.random() * (31 - 0) + 0);
-var tries = document.getElementById('tries');
+var numTries = document.getElementById('tries');
 var replay = document.querySelector('.restart');
 var state = teamNames[random].name.split("").fill('_')
+var answer = teamNames[random].name;
 //var state = teamNames[random].name.replace(/./ig, "_");
 
-console.log(state);
 
 //var answer = teamNames[x].name;
 //let state = answer.split("").fill("_");
@@ -109,23 +109,18 @@ console.log(state);
 
 function startGame() {
   var answer = teamNames[random].name;
-  //letters.textContent = answer.split("").fill("_");
   letters.textContent = state.join(" ");
   hintbox.textContent = "";
+  numTries.textContent = 5;
+
 
 
 
   function giveHint() {
     hintbox.textContent = teamNames[random].hintOne;
-
   }
 }
 
-  //word.replaceAll(".", "_");
-// let str = letters.textContent = teamNames[x].name;
-//teamNames[x].name.replaceAll(_);
-
-//}
 
 function giveHint() {
   hintbox.textContent = teamNames[random].hintOne;
@@ -134,13 +129,10 @@ function giveHint() {
 
 
 function takeGuess(guess) {
-    //let tries = document.getElementById('tries');
+    let tries = document.getElementById('tries');
     //let guesses = "";
-    let answer = Array.from(teamNames[random].name);
+    //let answer = Array.from(teamNames[random].name);
 
-      //let state = teamNames[random].name.split("").fill("_");
-console.log(answer);
-//let state = answer.split("").fill("_");
 //console.log(answer);
 //console.log(state);
   for ( let i = 0; i < state.length; i++ ) {
@@ -148,14 +140,20 @@ console.log(answer);
   let letter = answer[i];
    if ( letter === guess ) {
     state[i] = guess;
-  letters.textContent = state.join(" ");}
-  //if ( state ==== answer )
+  letters.textContent = state.join(" ");
+}
  }
+ tries.textContent--
 }
   // };
-
+function loseGame() {
+  if ( tries.textContent = 0 ) {
+  alert("You Lost! Try again!")
+  }
+}
 
 startGame();
+loseGame();
 a.addEventListener('click', () => takeGuess("a"));
 b.addEventListener('click', () => takeGuess("b"));
 c.addEventListener('click', () => takeGuess("c"));
