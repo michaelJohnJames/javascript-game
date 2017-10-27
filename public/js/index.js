@@ -110,7 +110,7 @@ console.log(state);
 function startGame() {
   var answer = teamNames[random].name;
   //letters.textContent = answer.split("").fill("_");
-  letters.textContent = state;
+  letters.textContent = state.join(" ");
   hintbox.textContent = "";
 
 
@@ -148,37 +148,12 @@ console.log(answer);
   let letter = answer[i];
    if ( letter === guess ) {
     state[i] = guess;
-  letters.textContent = state;
+  letters.textContent = state.join(" ");}
+  //if ( state ==== answer )
  }
 }
-   };
+  // };
 
-//   else { console.log(no match) }
-//    word.replace(/_/ig, letter);
-//  } else { tries++ }
-
-  //word.replace(/_/ig, userGuess);
-  //Array.from(word);
-  //for (let character of Array.from(word) ) {
-  //  i=0; i < Array.from(word).length; i++ ) {
-    //Array.from(word).forEach(log());
-  //  if (/
-  //};
-//if (word.includes(letter)) {
-  //return word.replace(/_/ig, letter);
-
-//function gameEnd() {
-//  if (word === )
-//}
-
-
-// function letter(guess) {
-//  if (/[guess]/ig) {
-//    console.log(guess);//replace letter
-//  } else { tries++;
-
-//  };
-//}
 
 startGame();
 a.addEventListener('click', () => takeGuess("a"));
