@@ -62,10 +62,13 @@
 
   #restart {
     width: 150px;
-    height: 50px;
+    height: 35px;
+    color: #000080;
+    background-color: white;
     border-radius: 10%;
     position: relative;
-    
+    margin-bottom: 10px;
+
   }
 
 
@@ -108,7 +111,6 @@ h3 {
 #hint-box {
   width: 400px;
   height: 50px;
-  /*background-color: green;*/
   display: inline-block;
   position: absolute;
   font-size: 30px;
@@ -121,6 +123,41 @@ h3 {
 p {
   font-size: 30px;
 }
+
+#result-box {
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  overflow: scroll;
+}
+
+.modal-box {
+  height: 200px;
+  width: 500px;
+  background: #000080;
+  color: white;
+  margin: 0 auto;
+  position: relative;
+  top: calc(50vh - 100px);
+  box-shadow: 0 0 15px #333;
+  border-radius: 6px;
+}
+
+/*a.close {
+  display: block;
+  float: right;
+  font-size: 1.5em;
+  font-family: sans-serif;
+  color: black;
+  padding-top: 5px;
+  padding-right: 10px;
+  text-decoration: none;
+} */
+
+
 
  .hidden {
   display: none;

@@ -213,7 +213,8 @@
     letters.textContent = state.join(" ");
     hintbox.textContent = "";
     numTries.textContent = 5;
-    document.getElementById("restart").classList.add('hidden')
+    document.getElementById("restart").classList.add('hidden');
+    document.getElementById("result-box").classList.add("hidden");
   //}
 
   //function restart() {
@@ -326,12 +327,12 @@ checkWin();
         })
 function checkWin() {
       if (state.includes("_") === false ) {
-        alert("You win!");
-        document.getElementById("restart").classList.remove('hidden');;
+        document.getElementById("result-box").classList.remove("hidden");
+        document.getElementById("restart").classList.remove("hidden");
       };
     }
 
-  replay.addEventListener('click', startGame);
+  replay.addEventListener('click', restartGame);
   //a.addEventListener('click', () => takeGuess("a"));
   //b.addEventListener('click', () => takeGuess("b"));
   //c.addEventListener('click', () => takeGuess("c"));
