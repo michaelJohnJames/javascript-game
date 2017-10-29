@@ -171,15 +171,17 @@
 //let random, state, answer;
   var hintbox = document.getElementById('hint-box');
   var numTries = document.getElementById('tries');
-  var random = Math.floor(Math.random() * (31 - 0) + 0);
-
+  //const random = Math.floor(Math.random() * (31 - 0) + 0);
+//console.log(random);
 
   //const answer = teamNames[random].name;
   var triesCounter = numTries.textContent;
-  //var random = Math.floor(Math.random() * (31 - 0) + 0);
+  var random = Math.floor(Math.random() * (31 - 0) + 0);
   var state = teamNames[random].name.split("").fill('_');
-  var answer = teamNames[random].name;
-
+  //console.log(random);
+ var answer = teamNames[random].name;
+  //console.log(random);
+//let random, state, answer, teanNames;
 
 
 
@@ -191,8 +193,9 @@
 
 
   function restartGame() {
-//let random = "";
-    let random = Math.floor(Math.random() * (31 - 0) + 0);
+random = "";
+    //var random = Math.floor(Math.random() * (31 - 0) + 0);
+    console.log(random);
     let hintBox = "";
     let state = "";
     let answer = "";
@@ -202,11 +205,16 @@
 };
 
   function startGame() {
-    //var random = Math.floor(Math.random() * (31 - 0) + 0);
+  //random = "";
+
+    var random = Math.floor(Math.random() * (31 - 0) + 0);
+    console.log(random);
     var hintbox = document.getElementById('hint-box');
     var numTries = document.getElementById('tries');
     var state = teamNames[random].name.split("").fill('_');
+    console.log(random);
     var answer = teamNames[random].name;
+    console.log(random);
     var triesCounter = numTries.textContent;
 
 
@@ -235,6 +243,7 @@
   function giveHint() {
     var hintbox = document.getElementById('hint-box');
     hintbox.textContent = teamNames[random].hintOne;
+    console.log(random);
   }
 
 
@@ -307,12 +316,14 @@ const guess = form.guess.value;
 
 //if (guess === includes(/[abcdefghijklmnopqrstuvwxyz]/ig) ) {
 //console.log(guess);
-
+//var state = teamNames[random].name.split("").fill("_");
+//var random = Math.floor(Math.random() * (31 - 0) + 0);
 
         for (let i = 0; i < state.length; i++) {
 
     //let guess = ""
-          //let state = teamNames[random].name.split("").fill("_");
+
+          console.log(random);
           let letter = answer[i];
           if (letter === guess) {
             state[i] = guess;
