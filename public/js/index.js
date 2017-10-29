@@ -128,8 +128,18 @@
       hintOne: "AFC West"
     }
   ];
+  const form = document.forms[0];
+  var replay = document.querySelector('.restart');
+  function giveHint() {
+    //var random = Math.floor(Math.random() * (31 - 0) + 0);
+    var hintbox = document.getElementById('hint-box');
+    hintbox.textContent = teamNames[random].hintOne;
+
+  }
+
 
   var letters = document.getElementById('letters');
+  const guess = form.guess.value;
   //var a = document.getElementById('letter-a');
   //var b = document.getElementById('letter-b');
   //var c = document.getElementById('letter-c');
@@ -156,16 +166,19 @@
   //var x = document.getElementById('letter-x');
   //var y = document.getElementById('letter-y');
   //var z = document.getElementById('letter-z');
-  var random = Math.floor(Math.random() * (31 - 0) + 0);
+  //var random = Math.floor(Math.random() * (31 - 0) + 0);
   //var random = Math.floor(Math.random() * (31 - 0) + 0);
   var hintbox = document.getElementById('hint-box');
   var numTries = document.getElementById('tries');
+  var random = Math.floor(Math.random() * (31 - 0) + 0);
 
-  var answer = teamNames[random].name;
+
+  //const answer = teamNames[random].name;
   var triesCounter = numTries.textContent;
   //var random = Math.floor(Math.random() * (31 - 0) + 0);
   var state = teamNames[random].name.split("").fill('_');
-  var replay = document.querySelector('.restart');
+  let answer = teamNames[random].name;
+
 
 
 
@@ -177,20 +190,20 @@
 
 
 
+
   function startGame() {
-    var random = Math.floor(Math.random() * (31 - 0) + 0);
 
     var hintbox = document.getElementById('hint-box');
     var numTries = document.getElementById('tries');
     var state = teamNames[random].name.split("").fill('_');
-    var answer = teamNames[random].name;
+
     var triesCounter = numTries.textContent;
 
-    //var answer = teamNames[random].name;
+    var answer = teamNames[random].name;
     letters.textContent = state.join(" ");
     hintbox.textContent = "";
     numTries.textContent = 5;
-  }
+  //}
 
   //function restart() {
   //  var random = Math.floor(Math.random() * (31 - 0) + 0);
@@ -206,7 +219,7 @@
   //  hintbox.textContent = "";
   //  numTries.textContent = 5;
   //}
-
+}
   function giveHint() {
     var hintbox = document.getElementById('hint-box');
     hintbox.textContent = teamNames[random].hintOne;
@@ -214,21 +227,20 @@
 
 
 
-  function giveHint() {
-    var random = Math.floor(Math.random() * (31 - 0) + 0);
-    var hintbox = document.getElementById('hint-box');
-    hintbox.textContent = teamNames[random].hintOne;
-
-  }
 
 
-function validateGuess(guess) {
 
 
-  }
+//function validateGuess(guess) {
+
+ //return guess && guess === /[abcdefghijklmnopqrstuvwxyz]/ig;
+
+//  }
 
 
-  function takeGuess(guess) {
+
+
+  //function takeGuess(guess) {
     //var random = Math.floor(Math.random() * (31 - 0) + 0);
   //  var state = teamNames[random].name.split("").fill('_');
     //var answer = teamNames[random].name;
@@ -251,21 +263,8 @@ function validateGuess(guess) {
     //}
 
 
-    for (let i = 0; i < state.length; i++) {
-
-
-      //let state = teamNames[random].name.split("").fill("_");
-      let letter = answer[i];
-      if (letter === guess) {
-        state[i] = guess;
-        letters.textContent = state.join(" ");
-        console.log(state);
-        console.log(answer);
-      }
-
-    }
     //numTries.textContent--;
-  }
+  //}
 
 
 
@@ -289,7 +288,29 @@ function validateGuess(guess) {
 
   startGame();
   //loseGame();
-form.addEventListener('click', validateGuess);
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+const guess = form.guess.value;
+
+//if (guess === includes(/[abcdefghijklmnopqrstuvwxyz]/ig) ) {
+//console.log(guess);
+
+
+        for (let i = 0; i < state.length; i++) {
+
+    //let guess = ""
+          //let state = teamNames[random].name.split("").fill("_");
+          let letter = answer[i];
+          if (letter === guess) {
+            state[i] = guess;
+            letters.textContent = state.join(" ");
+            console.log(state);
+            console.log(answer);
+          }
+          form.guess.value=''
+        }
+
+        } );
   replay.addEventListener('click', startGame);
   //a.addEventListener('click', () => takeGuess("a"));
   //b.addEventListener('click', () => takeGuess("b"));
