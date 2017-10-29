@@ -130,42 +130,42 @@
   ];
 
   var letters = document.getElementById('letters');
-  var a = document.getElementById('letter-a');
-  var b = document.getElementById('letter-b');
-  var c = document.getElementById('letter-c');
-  var d = document.getElementById('letter-d');
-  var e = document.getElementById('letter-e');
-  var f = document.getElementById('letter-f');
-  var g = document.getElementById('letter-g');
-  var h = document.getElementById('letter-h');
-  var i = document.getElementById('letter-i');
-  var j = document.getElementById('letter-j');
-  var k = document.getElementById('letter-k');
-  var l = document.getElementById('letter-l');
-  var m = document.getElementById('letter-m');
-  var n = document.getElementById('letter-n');
-  var o = document.getElementById('letter-o');
-  var p = document.getElementById('letter-p');
-  var q = document.getElementById('letter-q');
-  var r = document.getElementById('letter-r');
-  var s = document.getElementById('letter-s');
-  var t = document.getElementById('letter-t');
-  var u = document.getElementById('letter-u');
-  var v = document.getElementById('letter-v');
-  var w = document.getElementById('letter-w');
-  var x = document.getElementById('letter-x');
-  var y = document.getElementById('letter-y');
-  var z = document.getElementById('letter-z');
+  //var a = document.getElementById('letter-a');
+  //var b = document.getElementById('letter-b');
+  //var c = document.getElementById('letter-c');
+  //var d = document.getElementById('letter-d');
+  //var e = document.getElementById('letter-e');
+  //var f = document.getElementById('letter-f');
+  //var g = document.getElementById('letter-g');
+  //var h = document.getElementById('letter-h');
+  //var i = document.getElementById('letter-i');
+  //var j = document.getElementById('letter-j');
+  //var k = document.getElementById('letter-k');
+  //var l = document.getElementById('letter-l');
+  //var m = document.getElementById('letter-m');
+  //var n = document.getElementById('letter-n');
+  //var o = document.getElementById('letter-o');
+  //var p = document.getElementById('letter-p');
+  //var q = document.getElementById('letter-q');
+  //var r = document.getElementById('letter-r');
+  //var s = document.getElementById('letter-s');
+  //var t = document.getElementById('letter-t');
+  //var u = document.getElementById('letter-u');
+  //var v = document.getElementById('letter-v');
+  //var w = document.getElementById('letter-w');
+  //var x = document.getElementById('letter-x');
+  //var y = document.getElementById('letter-y');
+  //var z = document.getElementById('letter-z');
+  var random = Math.floor(Math.random() * (31 - 0) + 0);
   //var random = Math.floor(Math.random() * (31 - 0) + 0);
-  var replay = document.querySelector('.restart');
-  //var random = Math.floor(Math.random() * (31 - 0) + 0);
-  //var hintbox = document.getElementById('hint-box');
-  //var numTries = document.getElementById('tries');
+  var hintbox = document.getElementById('hint-box');
+  var numTries = document.getElementById('tries');
 
-  //var answer = teamNames[random].name;
-  //var triesCounter = numTries.textContent;
+  var answer = teamNames[random].name;
+  var triesCounter = numTries.textContent;
   //var random = Math.floor(Math.random() * (31 - 0) + 0);
-  //var state = teamNames[random].name.split("").fill('_');
+  var state = teamNames[random].name.split("").fill('_');
+  var replay = document.querySelector('.restart');
 
 
 
@@ -192,20 +192,20 @@
     numTries.textContent = 5;
   }
 
-  function restart() {
-    var random = Math.floor(Math.random() * (31 - 0) + 0);
+  //function restart() {
+  //  var random = Math.floor(Math.random() * (31 - 0) + 0);
 
-    var hintbox = document.getElementById('hint-box');
-    var numTries = document.getElementById('tries');
-    var state = teamNames[random].name.split("").fill('_');
-    var answer = teamNames[random].name;
-    var triesCounter = numTries.textContent;
+  //  var hintbox = document.getElementById('hint-box');
+  //  var numTries = document.getElementById('tries');
+  //  var state = teamNames[random].name.split("").fill('_');
+  //  var answer = teamNames[random].name;
+  //  var triesCounter = numTries.textContent;
 
     //var answer = teamNames[random].name;
-    letters.textContent = state.join(" ");
-    hintbox.textContent = "";
-    numTries.textContent = 5;
-  }
+  //  letters.textContent = state.join(" ");
+  //  hintbox.textContent = "";
+  //  numTries.textContent = 5;
+  //}
 
   function giveHint() {
     var hintbox = document.getElementById('hint-box');
@@ -218,14 +218,20 @@
     var random = Math.floor(Math.random() * (31 - 0) + 0);
     var hintbox = document.getElementById('hint-box');
     hintbox.textContent = teamNames[random].hintOne;
+
+  }
+
+
+function validateGuess(guess) {
+
 
   }
 
 
   function takeGuess(guess) {
-    var random = Math.floor(Math.random() * (31 - 0) + 0);
-    var state = teamNames[random].name.split("").fill('_');
-    var answer = teamNames[random].name;
+    //var random = Math.floor(Math.random() * (31 - 0) + 0);
+  //  var state = teamNames[random].name.split("").fill('_');
+    //var answer = teamNames[random].name;
 
     //var numTries = document.getElementById('tries');
     //var replay = document.querySelector('.restart');
@@ -283,34 +289,34 @@
 
   startGame();
   //loseGame();
-  a.addEventListener('click', () => takeGuess("a"));
-  b.addEventListener('click', () => takeGuess("b"));
-  c.addEventListener('click', () => takeGuess("c"));
-  d.addEventListener('click', () => takeGuess("d"));
-  e.addEventListener('click', () => takeGuess("e"));
-  f.addEventListener('click', () => takeGuess("f"));
-  g.addEventListener('click', () => takeGuess("g"));
-  h.addEventListener('click', () => takeGuess("h"));
-  i.addEventListener('click', () => takeGuess("i"));
-  j.addEventListener('click', () => takeGuess("j"));
-  k.addEventListener('click', () => takeGuess("k"));
-  l.addEventListener('click', () => takeGuess("l"));
-  m.addEventListener('click', () => takeGuess("m"));
-  n.addEventListener('click', () => takeGuess("n"));
-  o.addEventListener('click', () => takeGuess("o"));
-  p.addEventListener('click', () => takeGuess("p"));
-  q.addEventListener('click', () => takeGuess("q"));
-  r.addEventListener('click', () => takeGuess("r"));
-  s.addEventListener('click', () => takeGuess("s"));
-  t.addEventListener('click', () => takeGuess("t"));
-  u.addEventListener('click', () => takeGuess("u"));
-  v.addEventListener('click', () => takeGuess("v"));
-  w.addEventListener('click', () => takeGuess("w"));
-  x.addEventListener('click', () => takeGuess("x"));
-  y.addEventListener('click', () => takeGuess("y"));
-  z.addEventListener('click', () => takeGuess("z"));
+form.addEventListener('click', validateGuess);
+  replay.addEventListener('click', startGame);
+  //a.addEventListener('click', () => takeGuess("a"));
+  //b.addEventListener('click', () => takeGuess("b"));
+  //c.addEventListener('click', () => takeGuess("c"));
+  //d.addEventListener('click', () => takeGuess("d"));
+  //e.addEventListener('click', () => takeGuess("e"));
+  //f.addEventListener('click', () => takeGuess("f"));
+  //g.addEventListener('click', () => takeGuess("g"));
+  //h.addEventListener('click', () => takeGuess("h"));
+  //i.addEventListener('click', () => takeGuess("i"));
+  //j.addEventListener('click', () => takeGuess("j"));
+  //k.addEventListener('click', () => takeGuess("k"));
+  //l.addEventListener('click', () => takeGuess("l"));
+  //m.addEventListener('click', () => takeGuess("m"));
+  //n.addEventListener('click', () => takeGuess("n"));
+  //o.addEventListener('click', () => takeGuess("o"));
+  //p.addEventListener('click', () => takeGuess("p"));
+  //q.addEventListener('click', () => takeGuess("q"));
+  //r.addEventListener('click', () => takeGuess("r"));
+  //s.addEventListener('click', () => takeGuess("s"));
+  //t.addEventListener('click', () => takeGuess("t"));
+  //u.addEventListener('click', () => takeGuess("u"));
+  //v.addEventListener('click', () => takeGuess("v"));
+  //w.addEventListener('click', () => takeGuess("w"));
+  //x.addEventListener('click', () => takeGuess("x"));
+  //y.addEventListener('click', () => takeGuess("y"));
+  //z.addEventListener('click', () => takeGuess("z"));
   hint.addEventListener('click', giveHint);
-  replay.addEventListener('click', restart);
-
 
 })()
