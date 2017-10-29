@@ -129,7 +129,7 @@
     }
   ];
   const form = document.forms[0];
-  var replay = document.querySelector('.restart');
+  var replay = document.getElementById('restart');
   function giveHint() {
     //var random = Math.floor(Math.random() * (31 - 0) + 0);
     var hintbox = document.getElementById('hint-box');
@@ -168,6 +168,7 @@
   //var z = document.getElementById('letter-z');
   //var random = Math.floor(Math.random() * (31 - 0) + 0);
   //var random = Math.floor(Math.random() * (31 - 0) + 0);
+//let random, state, answer;
   var hintbox = document.getElementById('hint-box');
   var numTries = document.getElementById('tries');
   var random = Math.floor(Math.random() * (31 - 0) + 0);
@@ -189,10 +190,19 @@
   //word.replace(/[abcdefghijklmnopqrstuvwxyz]/ig, "_");
 
 
+  function restartGame() {
+//let random = "";
+    let random = "";
+    let hintBox = "";
+    let state = "";
+    let answer = "";
 
+    startGame();
+
+};
 
   function startGame() {
-
+    var random = Math.floor(Math.random() * (31 - 0) + 0);
     var hintbox = document.getElementById('hint-box');
     var numTries = document.getElementById('tries');
     var state = teamNames[random].name.split("").fill('_');
@@ -203,6 +213,7 @@
     letters.textContent = state.join(" ");
     hintbox.textContent = "";
     numTries.textContent = 5;
+    document.getElementById("restart").classList.add('hidden')
   //}
 
   //function restart() {
@@ -292,6 +303,7 @@
     event.preventDefault();
 const guess = form.guess.value;
 
+
 //if (guess === includes(/[abcdefghijklmnopqrstuvwxyz]/ig) ) {
 //console.log(guess);
 
@@ -306,11 +318,19 @@ const guess = form.guess.value;
             letters.textContent = state.join(" ");
             console.log(state);
             console.log(answer);
-          }
-          form.guess.value=''
         }
+          form.guess.value = '';
+          tries.textContent === triesCounter--;
+        }
+checkWin();
+        })
+function checkWin() {
+      if (state.includes("_") === false ) {
+        alert("You win!");
+        document.getElementById("restart").classList.remove('hidden');;
+      };
+    }
 
-        } );
   replay.addEventListener('click', startGame);
   //a.addEventListener('click', () => takeGuess("a"));
   //b.addEventListener('click', () => takeGuess("b"));
