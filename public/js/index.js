@@ -1,4 +1,4 @@
-(function game() {
+
   var teamNames = [{
       name: "eagles",
       hintOne: "NFC East"
@@ -178,7 +178,7 @@
   var triesCounter = numTries.textContent;
   //var random = Math.floor(Math.random() * (31 - 0) + 0);
   var state = teamNames[random].name.split("").fill('_');
-  let answer = teamNames[random].name;
+  var answer = teamNames[random].name;
 
 
 
@@ -192,7 +192,7 @@
 
   function restartGame() {
 //let random = "";
-    let random = "";
+    let random = Math.floor(Math.random() * (31 - 0) + 0);
     let hintBox = "";
     let state = "";
     let answer = "";
@@ -202,14 +202,14 @@
 };
 
   function startGame() {
-    var random = Math.floor(Math.random() * (31 - 0) + 0);
+    //var random = Math.floor(Math.random() * (31 - 0) + 0);
     var hintbox = document.getElementById('hint-box');
     var numTries = document.getElementById('tries');
     var state = teamNames[random].name.split("").fill('_');
-
+    var answer = teamNames[random].name;
     var triesCounter = numTries.textContent;
 
-    var answer = teamNames[random].name;
+
     letters.textContent = state.join(" ");
     hintbox.textContent = "";
     numTries.textContent = 5;
@@ -360,5 +360,3 @@ function checkWin() {
   //y.addEventListener('click', () => takeGuess("y"));
   //z.addEventListener('click', () => takeGuess("z"));
   hint.addEventListener('click', giveHint);
-
-})()
