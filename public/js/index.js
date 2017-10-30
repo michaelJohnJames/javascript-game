@@ -154,10 +154,10 @@
   //START FUNCTION FOR REPLAY OF GAME
 
   function startGame(random) {
-    var state = teamNames[random].name.split("").fill('_');
-    var answer = teamNames[random].name;
-    var replay = document.getElementsByClassName('restart');
-    var triesCounter = numTries.textContent;
+    state = teamNames[random].name.split("").fill('_');
+    answer = teamNames[random].name;
+    replay = document.getElementsByClassName('restart');
+    triesCounter = numTries.textContent;
 
     letters.textContent = state.join(" ");
     hintbox.textContent = "";
