@@ -153,7 +153,6 @@
 
   function startGame(random) {
     var state = teamNames[random].name.split("").fill('_');
-    console.log(state);
     var answer = teamNames[random].name;
     var replay = document.getElementsByClassName('restart');
     var triesCounter = numTries.textContent;
@@ -181,10 +180,7 @@
         if (letter === guess) {
           state[i] = guess;
           letters.textContent = state.join(" ");
-          console.log(state);
-          console.log(state);
-          console.log(answer);
-        }
+      }
         form.guess.value = '';;
       }
       numTries.textContent++;
@@ -193,7 +189,6 @@
 
     function checkWin() {
       let state = teamNames[random].name.split("").fill('_');
-      console.log(state);
       if (state.includes("_") === false) {
         document.getElementById("result-box").classList.remove("hidden");
         document.getElementById("restart").classList.remove("hidden");
@@ -209,7 +204,6 @@
     //let random = Math.floor(Math.random() * (31 - 0) + 0);
     var hintbox = document.getElementById('hint-box');
     hintbox.textContent = teamNames[random].hintOne;
-    console.log(random);
   }
 
 // SUBMIT LETTER
@@ -218,13 +212,10 @@
     var guess = form.guess.value;
 
     for (let i = 0; i < state.length; i++) {
-      console.log(random);
       let letter = answer[i];
       if (letter === guess) {
         state[i] = guess;
         letters.textContent = state.join(" ");
-        console.log(state);
-        console.log(answer);
       }
       form.guess.value = '';;
     }
@@ -232,12 +223,10 @@
     if (state.includes("_") === false) {
 
       form.guess.value = "";
-      console.log(state);
       random = "";
       guess = "";
       answer = "";
       state = "";
-      console.log(state);
       document.getElementById("result-box").classList.remove("hidden");
       document.getElementById("restart").classList.remove("hidden");
     }
@@ -247,7 +236,6 @@
   hint.addEventListener('click', giveHint);
 
   function checkWin() {
-    console.log(state);
     if (state.includes("_") === false) {
       let guess = "";
       answer = "";
