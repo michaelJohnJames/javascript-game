@@ -1,83 +1,68 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    /*background-color: rgba(0,0,0,0.1);*/
-  }
+  box-sizing: border-box;
+  margin: 0;
+  /*background-color: rgba(0,0,0,0.1);*/
+}
 
-  body {
-
-  }
+body {}
 
 .container {
   text-align: center;
-
 }
 
-  button {
-    width: 50px;
-    height: 50px;
-    color: white;
-    background: #000080;
-    padding: 5px;
-    border: 1px solid black;
-    border-radius: 50%;
-    font-size: 20px;
-    margin: 2px;
-    display: inline-block;
-  }
+button {
+  width: 50px;
+  height: 50px;
+  color: white;
+  background: #000080;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 50%;
+  font-size: 20px;
+  margin: 2px;
+  display: inline-block;
+}
 
-  button:hover {
-    background-color: #0000ff;
-  }
+button:hover {
+  background-color: #0000ff;
+}
 
-  button:visited {
-    cursor: not-allowed;
-  }
+button:visited {
+  cursor: not-allowed;
+}
 
-  /* .button-box {
-    padding: 0px;
-    margin-top: 50px;
-    margin-bottom: 0;
-    position: relative;
+.form-box {
+  padding: 0px;
+  margin-top: 50px;
+  margin-bottom: 0;
+  position: relative;
+}
 
-    } */
+#hint {
+  width: 150px;
+  height: 50px;
+  border-radius: 10%;
+  position: relative;
+  display: inline-block;
+  margin-left: -150px;
+}
 
-    .form-box {
-      padding: 0px;
-      margin-top: 50px;
-      margin-bottom: 0;
-      position: relative;
-
-      }
-
-  #hint {
-    width: 150px;
-    height: 50px;
-    border-radius: 10%;
-    position: relative;
-    display: inline-block;
-    margin-left: -150px;
-
-  }
-
-  #restart {
-    width: 150px;
-    height: 35px;
-    color: #000080;
-    background-color: white;
-    border-radius: 10%;
-    position: relative;
-    margin-bottom: 10px;
-
-  }
-
+#restart {
+  width: 150px;
+  height: 35px;
+  color: #000080;
+  background-color: white;
+  border-radius: 10%;
+  position: relative;
+  margin-bottom: 10px;
+}
 
 #headline {
   font-size: 60px;
   font-family: serif;
   display: inline;
   margin-left: 100px;
-  }
+}
 
 .headline-box {
   width: 100%;
@@ -97,7 +82,7 @@ h3 {
 
 #letters {
   font-size: 60px;
-  }
+}
 
 #tries-box {
   font-size: 20px;
@@ -117,7 +102,6 @@ h3 {
   text-align: left;
   padding: 10px;
   margin-left: 5px;
-
 }
 
 p {
@@ -146,19 +130,6 @@ p {
   border-radius: 6px;
 }
 
-/*a.close {
-  display: block;
-  float: right;
-  font-size: 1.5em;
-  font-family: sans-serif;
-  color: black;
-  padding-top: 5px;
-  padding-right: 10px;
-  text-decoration: none;
-} */
-
-
-
- .hidden {
+.hidden {
   display: none;
 }

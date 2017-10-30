@@ -32,7 +32,7 @@
 
 
     <div class="tries-box">
-      <p>Remaining guesses: <span id="tries"></span></p>
+      <p>Number of tries: <span id="tries"></span></p>
     </div>
     <br>
 
@@ -47,92 +47,55 @@
 
 
 
-<div class="form-box">
+    <div class="form-box">
 
-    <form onsubmit="return false">
-  <p>Guess a letter</p>
-       <input type="text" name="guess">
-       <input type="submit"><br>
-  </form>
+      <form onsubmit="return false">
+        <p>Guess a letter</p>
+        <input type="text" name="guess">
+        <input type="submit"><br>
+      </form>
 
 
-</div>
+    </div>
 
-<!---! <div id="result-box" class="hidden">
+    <!---! <div id="result-box" class="hidden">
 <h3>You win!</h3>
 </div>  --->
 
 
 
 
-<div id="result-box" class="hidden">
-  <div class="modal-box">
-      <article class="modal-content">
-<br>
-<br>
-      <p class="result-text"><b>Touchdown! <br> You win!</b></p>
+    <div id="result-box" class="hidden">
+      <div class="modal-box">
+        <article class="modal-content">
+          <br>
+          <br>
+          <p class="result-text"><b>Touchdown! <br> You win!</b></p>
 
-      </article>
-    <br>
-    <br>
-    <footer class="modal-footer">
-<button id="restart">Restart</button>
-    </footer>
-  </div>
-</div>
+        </article>
+        <br>
+        <br>
+        <footer class="modal-footer">
+          <button id="restart">Restart</button>
+        </footer>
+      </div>
+    </div>
 
-<div id="lose-box" class="hidden">
-  <div class="modal-box">
-      <article class="modal-content">
-<br>
-<br>
-      <p class="lose-text"><b>Sorry, you've been sacked! <br> Try Again!</b></p>
+    <div id="lose-box" class="hidden">
+      <div class="modal-box">
+        <article class="modal-content">
+          <br>
+          <br>
+          <p class="lose-text"><b>Sorry, you've been sacked! <br> Try Again!</b></p>
 
-      </article>
-    <br>
-    <br>
-    <footer class="modal-footer">
-<button id="restart-lose">Restart</button>
-    </footer>
-  </div>
-</div>
-
-
-<!---!
-      <div class="button-box">
-        <h3>Select a letter</h3>
-        <div class="button-top">
-
-          <button id="letter-a" value='a'>A</button>
-          <button id="letter-b">B</button>
-          <button id="letter-c">C</button>
-          <button id="letter-d">D</button>
-          <button id="letter-e">E</button>
-          <button id="letter-f">F</button>
-          <button id="letter-g">G</button>
-          <button id="letter-h">H</button>
-          <button id="letter-i">I</button>
-          <button id="letter-j">J</button>
-          <button id="letter-k">K</button>
-          <button id="letter-l">L</button>
-          <button id="letter-m">M</button>
-        </div>
-        <div class="button-bottom">
-          <button id="letter-n">N</button>
-          <button id="letter-o">O</button>
-          <button id="letter-p">P</button>
-          <button id="letter-q">Q</button>
-          <button id="letter-r">R</button>
-          <button id="letter-s">S</button>
-          <button id="letter-t">T</button>
-          <button id="letter-u">U</button>
-          <button id="letter-v">V</button>
-          <button id="letter-w">W</button>
-          <button id="letter-x">X</button>
-          <button id="letter-y">Y</button>
-          <button id="letter-z">Z</button>
-        </div>
-      </div> --->
+        </article>
+        <br>
+        <br>
+        <footer class="modal-footer">
+          <button id="restart-lose">Restart</button>
+        </footer>
+      </div>
+    </div>
 
   </div>
 
