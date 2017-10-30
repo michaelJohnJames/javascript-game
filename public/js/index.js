@@ -133,7 +133,7 @@
   //var replayLose = document.getElementById('restart-lose')
   var letters = document.getElementById('letters');
   const guess = form.guess.value;
-  var hintbox = document.getElementById('hint-box');
+  //var hintbox = document.getElementById('hint-box');
   var numTries = document.getElementById('tries');
 //let answer, random, state;
   //var random = Math.floor(Math.random() * (31 - 0) + 0);
@@ -145,7 +145,7 @@
 
 
       letters.textContent = state.join(" ");
-      hintbox.textContent = "";
+    //  hintbox.textContent = "";
       numTries.textContent = 0;
 //var random, state, answer;
   var hintbox = document.getElementById('hint-box');
@@ -179,8 +179,11 @@ return random;
 var random = null;
     console.log(random);
 //var hintBox= "";
-//hintBox.textContent = null;
-hint.removeEventListener('click', giveHint);
+//var hintbox = document.getElementById('hint-box');
+//var hint = document.getElementById('hint');
+hintbox.textContent = "";
+
+//hint.removeEventListener('click', giveHint);
 form.removeEventListener('submit', guess);
 
 
@@ -211,10 +214,20 @@ form.removeEventListener('submit', guess);
 
 
     letters.textContent = state.join(" ");
-    hintbox.textContent = "";
+    //hintbox.textContent = "";
     numTries.textContent = 0;
     document.getElementById("result-box").classList.add("hidden");
     document.getElementById("lose-box").classList.add("hidden");
+    //hint.addEventListener('click', giveHint);
+
+    //var random = Math.floor(Math.random() * (31 - 0) + 0);
+
+function giveHint() {
+      var hintbox = document.getElementById('hint-box');
+      hintbox.textContent = teamNames[random].hintOne;
+    console.log(random);
+};
+
     hint.addEventListener('click', giveHint);
 
     //function giveHint() {
