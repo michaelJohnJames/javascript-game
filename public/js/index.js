@@ -144,6 +144,8 @@
   var triesCounter = numTries.textContent;
   numTries.textContent = 0;
 
+
+//FOR RESTART
   function getRandomNumber() {
     var random = Math.floor(Math.random() * (31 - 0) + 0);
     startGame(random);
@@ -163,11 +165,11 @@
     document.getElementById("result-box").classList.add("hidden");
     document.getElementById("lose-box").classList.add("hidden");
 
-    function giveHint() {
+    function newHint() {
       var hintbox = document.getElementById('hint-box');
       hintbox.textContent = teamNames[random].hintOne;
     };
-    hint.addEventListener('click', giveHint);
+    hint.addEventListener('click', newHint);
 
 
     form.addEventListener('submit', function guess(event) {
@@ -188,7 +190,7 @@
     })
 
     function checkWin() {
-      let state = teamNames[random].name.split("").fill('_');
+      //let state = teamNames[random].name.split("").fill('_');
       if (state.includes("_") === false) {
         document.getElementById("result-box").classList.remove("hidden");
         document.getElementById("restart").classList.remove("hidden");
