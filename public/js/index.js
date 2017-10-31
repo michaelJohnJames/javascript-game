@@ -196,6 +196,7 @@
         document.getElementById("restart").classList.remove("hidden");
         guess = "";
         answer = "";
+        numTries.textContent = "";
         };
     }
   }
@@ -245,6 +246,7 @@
       let state = "";
       document.getElementById("result-box").classList.remove("hidden");
       document.getElementById("restart").classList.remove("hidden");
+      numTries.textContent = "";
     };
   }
 
