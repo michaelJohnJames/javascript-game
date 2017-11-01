@@ -147,7 +147,7 @@
 
 //FOR RESTART
   function getRandomNumber() {
-    var random = Math.floor(Math.random() * (31 - 0) + 0);
+    var random = Math.floor(Math.random() * (32 - 0) + 0);
     startGame(random);
   };
 
@@ -185,7 +185,7 @@
       }
         form.guess.value = '';;
       }
-      numTries.textContent++;
+      numTries.textContent + 1;
       checkWin();
     })
 
@@ -196,7 +196,7 @@
         document.getElementById("restart").classList.remove("hidden");
         guess = "";
         answer = "";
-        numTries.textContent = "";
+        numTries.textContent = 0;
         };
     }
   }
