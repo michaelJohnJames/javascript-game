@@ -32,7 +32,7 @@ button:visited {
 .form-box {
   padding: 0px;
   margin-top: 50px;
-  margin-bottom: 0;
+  margin-bottom: 40px;
   position: relative;
 }
 
@@ -126,6 +126,83 @@ p {
   top: calc(50vh - 100px);
   box-shadow: 0 0 15px #333;
   border-radius: 6px;
+}
+
+#field {
+  width: 1000px;
+  margin-top: 50px;
+  height: 100px;
+  background-color: green;
+  margin: 0 auto;
+  position: relative;
+}
+
+.field-box-endzone {
+  width: 80px;
+  height: 100px;
+  margin-left: 1px;
+  background-color: blue;
+  color: white;
+  font-family: Arial Rounded MT Bold;
+  padding-top: 80px;
+  display: inline-block;
+}
+
+.field-box-l {
+  width: 80px;
+  height: 100px;
+  margin-left: 1px;
+  background-color: green;
+  display: inline-block;
+  color: white;
+  font-family: Arial Rounded MT Bold;
+  padding-top: 80px;
+  padding-left: 60px;
+}
+
+.field-box-r {
+  width: 80px;
+  height: 100px;
+  margin-left: 1px;
+  background-color: green;
+  display: inline-block;
+  color: white;
+  font-family: Arial Rounded MT Bold;
+  padding-top: 80px;
+  padding-right: 50px;
+}
+
+.field-box-mid-r {
+  width: 80px;
+  height: 100px;
+  margin-left: 1px;
+  background-color: green;
+  display: inline-block;
+  color: white;
+  font-family: Arial Rounded MT Bold;
+  padding-top: 80px;
+  padding-right: 65px;
+
+}
+
+.field-box-mid-l {
+  width: 80px;
+  height: 100px;
+  margin-left: 1px;
+  background-color: green;
+  display: inline-block;
+  color: white;
+  font-family: Arial Rounded MT Bold;
+  padding-top: 80px;
+  padding-left: 65px;
+}
+
+
+
+#yard-10l {
+  display:inline-block;
+  color: white;
+  text-align: left;
 }
 
 .hidden {
