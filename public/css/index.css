@@ -128,25 +128,24 @@ p {
   border-radius: 6px;
 }
 
-#field {
-  width: 1000px;
-  margin-top: 50px;
-  height: 100px;
-  background-color: green;
-  margin: 0 auto;
-  position: relative;
+.stadium-box {
+  padding: 5px;
+  margin-top: 5px;
 }
+
+
 
 .field-box-endzone {
   width: 80px;
   height: 100px;
-  margin-left: 1px;
-  background-color: blue;
-  color: white;
+  margin-top: 20px;
+  background-color: #000080;
+  color: #000080;
   font-family: Arial Rounded MT Bold;
   padding-top: 80px;
+  padding-left: 20px;
   display: inline-block;
-}
+  }
 
 .field-box-l {
   width: 80px;
@@ -197,13 +196,23 @@ p {
   padding-left: 65px;
 }
 
-
-
-#yard-10l {
-  display:inline-block;
-  color: white;
+/* .TD-text-l {
+  font-size: 15px;
+  font-family: Arial Rounded MT Bold;
+  transform: rotate(270deg);
   text-align: left;
+  padding-bottom: 5px;
+
+  }
+
+.TD-text-r {
+  font-size: 15px;
+  font-family: Arial Rounded MT Bold;
+  transform: rotate(90deg);
+  text-align: center;
 }
+*/
+
 
 .hidden {
   display: none;
