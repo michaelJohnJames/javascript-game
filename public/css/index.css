@@ -102,7 +102,7 @@ h3 {
   margin-left: 5px;
 }
 
-p {
+h2 {
   font-size: 30px;
 }
 
@@ -191,6 +191,14 @@ p {
   font-family: Arial Rounded MT Bold;
   padding-top: 5px;
   padding-left: 65px;
+}
+
+#ball10l, #ball20l, #ball30l, #ball40l, #ball50l, #ball50r, #ball40r, #ball30r, #ball20r, #ball10r {
+ background-color: brown;
+ height: 10px;
+ width: 30px;
+ border-radius: 50%;
+ 
 }
 
 /* .TD-text-l {

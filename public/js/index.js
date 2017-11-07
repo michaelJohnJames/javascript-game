@@ -191,6 +191,12 @@
 
     function checkWin() {
       //let state = teamNames[random].name.split("").fill('_');
+      if (state.includes("_") === true) {
+        document.getElementById("ball10r").classList.remove("hidden")
+      }
+
+
+
       if (state.includes("_") === false) {
         document.getElementById("result-box").classList.remove("hidden");
         document.getElementById("restart").classList.remove("hidden");
