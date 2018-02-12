@@ -134,7 +134,10 @@
   var form = document.forms[0];
   var guess = form.guess.value;
   var replay = document.getElementById('restart');
+<<<<<<< HEAD
   var playAgain = document.getElementById('restart-lose')
+=======
+>>>>>>> fe5cccdbe25a116e4cc2a2b612e099815ce6d0a6
   var letters = document.getElementById('letters');
   var random = Math.floor(Math.random() * (31 - 0) + 0);
   var answer = teamNames[random].name;
@@ -143,7 +146,10 @@
   var hintbox = document.getElementById('hint-box');
   var numTries = document.getElementById('tries');
   var triesCounter = numTries.textContent;
+<<<<<<< HEAD
   var lose = document.getElementById('lose-box');
+=======
+>>>>>>> fe5cccdbe25a116e4cc2a2b612e099815ce6d0a6
   numTries.textContent = 0;
 
 
@@ -188,6 +194,7 @@
         form.guess.value = '';;
       }
       numTries.textContent + 1;
+<<<<<<< HEAD
       console.log("numTries.textContent")
       checkWin();
     })
@@ -197,6 +204,11 @@
       document.getElementById('lose-box').classList.remove('hidden');
     }
 
+=======
+      checkWin();
+    })
+
+>>>>>>> fe5cccdbe25a116e4cc2a2b612e099815ce6d0a6
     function checkWin() {
       //let state = teamNames[random].name.split("").fill('_');
       if (state.includes("_") === true) {
@@ -205,8 +217,11 @@
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> fe5cccdbe25a116e4cc2a2b612e099815ce6d0a6
       if (state.includes("_") === false) {
         document.getElementById("result-box").classList.remove("hidden");
         document.getElementById("restart").classList.remove("hidden");
@@ -263,6 +278,7 @@
       document.getElementById("result-box").classList.remove("hidden");
       document.getElementById("restart").classList.remove("hidden");
       numTries.textContent = "";
+<<<<<<< HEAD
     } else if (numTries.textContent === '10') {
         document.getElementById('lose-box').classList.remove('hidden');
         document.getElementById('restart-lose').classList.remove('hidden');
@@ -272,4 +288,10 @@
 
   replay.addEventListener('click', getRandomNumber);
   playAgain.addEventListener('click', getRandomNumber);
+=======
+    };
+  }
+
+  replay.addEventListener('click', getRandomNumber);
+>>>>>>> fe5cccdbe25a116e4cc2a2b612e099815ce6d0a6
 })()
