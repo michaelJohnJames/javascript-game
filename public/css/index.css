@@ -54,11 +54,7 @@ button:visited {
   margin-left: -150px;
 }
 
-<<<<<<< HEAD
 #restart, #restart-lose {
-=======
-#restart {
->>>>>>> fe5cccdbe25a116e4cc2a2b612e099815ce6d0a6
   width: 150px;
   height: 35px;
   color: #000080;
@@ -95,11 +91,7 @@ h3 {
   color: gold;
   width: 800px;
   margin: 0 auto;
-<<<<<<< HEAD
   border-radius: 20px;
-=======
-  border-radius: 7%;
->>>>>>> fe5cccdbe25a116e4cc2a2b612e099815ce6d0a6
 }
 
 #letters {
@@ -130,11 +122,7 @@ h2 {
   font-size: 30px;
 }
 
-<<<<<<< HEAD
 #result-box, #lose-box {
-=======
-#result-box {
->>>>>>> fe5cccdbe25a116e4cc2a2b612e099815ce6d0a6
   background: rgba(0, 0, 0, 0.7);
   position: fixed;
   top: 0;
@@ -270,9 +258,5 @@ input {
 
 
 .hidden {
-<<<<<<< HEAD
- display: none;
-=======
   display: none;
->>>>>>> fe5cccdbe25a116e4cc2a2b612e099815ce6d0a6
 }
