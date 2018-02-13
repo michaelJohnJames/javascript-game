@@ -1,67 +1,67 @@
-(function game() {
+//(function game() {
 
   var teamNames = [{
-      name: "eagles",
+      name: "Eagles",
       hintOne: "NFC East"
     },
     {
-      name: "cowboys",
+      name: "Cowboys",
       hintOne: "NFC East"
     },
     {
-      name: "redskins",
+      name: "Redskins",
       hintOne: "NFC East"
     },
     {
-      name: "giants",
+      name: "Giants",
       hintOne: "NFC East"
     },
     {
-      name: "buccaneers",
+      name: "Buccaneers",
       hintOne: "NFC South"
     },
     {
-      name: "falcons",
+      name: "Falcons",
       hintOne: "NFC South"
     },
     {
-      name: "panthers",
+      name: "Panthers",
       hintOne: "NFC South"
     },
     {
-      name: "saints",
+      name: "Saints",
       hintOne: "NFC South"
     },
     {
-      name: "seahawks",
+      name: "Seahawks",
       hintOne: "NFC West"
     },
     {
-      name: "fortyniners",
+      name: "FortyNiners",
       hintOne: "NFC West"
     },
     {
-      name: "rams",
+      name: "Rams",
       hintOne: "NFC West"
     },
     {
-      name: "cardinals",
+      name: "Cardinals",
       hintOne: "NFC West"
     },
     {
-      name: "vikings",
+      name: "Vikings",
       hintOne: "NFC North"
     },
     {
-      name: "packers",
+      name: "Packers",
       hintOne: "NFC North"
     },
     {
-      name: "bears",
+      name: "Bears",
       hintOne: "NFC North"
     },
     {
-      name: "lions",
+      name: "Lions",
       hintOne: "NFC North"
     },
     {
@@ -130,6 +130,7 @@
     }
   ];
 
+
   //GLOBAL VARIABLES
   var form = document.forms[0];
   var guess = form.guess.value;
@@ -138,13 +139,14 @@
   var letters = document.getElementById('letters');
   var random = Math.floor(Math.random() * (31 - 0) + 0);
   var answer = teamNames[random].name;
+  console.log(answer);
   var state = answer.split("").fill("_");
   letters.textContent = state.join(" ");
   var hintbox = document.getElementById('hint-box');
   var numTries = document.getElementById('tries');
   var triesCounter = numTries.textContent;
   var lose = document.getElementById('lose-box');
-  numTries.textContent = 0;
+  numTries.textContent = 10;
 
 
 //FOR RESTART
@@ -157,13 +159,13 @@
 
   function startGame(random) {
     state = teamNames[random].name.split("").fill('_');
-    answer = teamNames[random].name;
+    answer = teamNames[random].name.toLowerCase();
     replay = document.getElementsByClassName('restart');
     triesCounter = numTries.textContent;
 
     letters.textContent = state.join(" ");
     hintbox.textContent = "";
-    numTries.textContent = 0;
+    numTries.textContent = 10;
     document.getElementById("result-box").classList.add("hidden");
     document.getElementById("lose-box").classList.add("hidden");
 
@@ -187,7 +189,7 @@
       }
         form.guess.value = '';;
       }
-      numTries.textContent + 1;
+      numTries.textContent - 1;
       checkWin();
     })
 
@@ -204,7 +206,7 @@
         document.getElementById("restart").classList.remove("hidden");
         guess = "";
         answer = "";
-        numTries.textContent = 0;
+        numTries.textContent = 10;
         };
     }
   }
@@ -223,14 +225,15 @@
     var guess = form.guess.value;
 
     for (let i = 0; i < state.length; i++) {
-      let letter = answer[i];
+      let letter = answer[i].toLowerCase();
+      console.log(letter)
       if (letter === guess) {
-        state[i] = guess;
+        state[i] = guess.toUpperCase();
         letters.textContent = state.join(" ");
       }
-      form.guess.value = '';;
+      form.guess.value = '';
     }
-    numTries.textContent++;
+    numTries.textContent--;
     if (state.includes("_") === false) {
 
       form.guess.value = "";
@@ -255,7 +258,7 @@
       document.getElementById("result-box").classList.remove("hidden");
       document.getElementById("restart").classList.remove("hidden");
       numTries.textContent = "";
-    } else if (numTries.textContent === '10') {
+    } else if (numTries.textContent === '0') {
       let guess = "";
       answer = "";
       random = null;
@@ -265,8 +268,11 @@
       };
   }
 
+  console.log(state);
+  console.log(answer);
+
 
   replay.addEventListener('click', getRandomNumber);
   playAgain.addEventListener('click', getRandomNumber);
 
-})()
+//})()
