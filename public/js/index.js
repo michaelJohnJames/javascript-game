@@ -232,8 +232,11 @@
         letters.textContent = state.join(" ");
       }
       form.guess.value = '';
+
     }
-    numTries.textContent--;
+numTries.textContent--;
+
+
     if (state.includes("_") === false) {
 
       form.guess.value = "";
